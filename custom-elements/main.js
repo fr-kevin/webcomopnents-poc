@@ -16,6 +16,9 @@ class MyButton extends HTMLElement {
     const button = document.createElement("button");
     button.setAttribute("class", "button");
     button.innerText = "Click me!!";
+    button.addEventListener("click", function test() {
+      console.log("hi");
+    });
 
     // Create css to apply style to shadow dom
     const style = document.createElement("style");
@@ -23,8 +26,10 @@ class MyButton extends HTMLElement {
       .wrapper {
         position: relative;
       }
+
       .button {
         width: 250px;
+        cursor: pointer;
         display: inline-block;
         padding: 10px;
         border: 1px solid #ddd;
